@@ -4,6 +4,7 @@ import StudentList from '../StudentList/StudentList.jsx';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import About from '../About/About.jsx';
 
+
 function App() {
     return (
         <div className="App">
@@ -11,7 +12,7 @@ function App() {
                 <h1>GitHub Student List</h1>
                 </header>
         <Router>
-            
+            <nav>
                 <ul>
                     <li>
                         <Link to="home">Home</Link>
@@ -36,12 +37,23 @@ function App() {
                <Route path="/students" exact>
                     <StudentList />
                   </Route>
+                  </nav>
                </Router>
         </div>
     
     );
     
 }
+// function studentFormList() {
+//     const navigate = useNavigate();
 
+//     const onSubmit = () => {
+//         navigate('/students');
+//     };
+//     return (
+
+//     <StudentForm onSubmit={onSubmit} />
+
+// )};
 
 export default App;

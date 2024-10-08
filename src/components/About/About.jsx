@@ -5,13 +5,15 @@ import { useHistory } from "react-router-dom";
 
 
 function About() {
-    return 
-        <div>
+    return (
+          <div>
             <h2>About</h2>
-            <p>This App allows userd to add and view students based on their GitHub usernames. This includes the ability to switch between different 'experiences' within the App</p>
-            </div>;
+               <p>This App allows users to add and view students based on their GitHub usernames. 
+                This includes the ability to switch between different 'experiences' within the App itself.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFN9cxZ65pxfVfVLoXULx1ZfMVYJhJGu17Lw&s" />
+        </div>
     
-};
+)};
 
 function App() {
     return (

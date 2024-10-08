@@ -1,11 +1,13 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import './StudentForm.css'
 
 
 function StudentForm() {
     
     const [student, setStudent] = useState('');
+    // const navigate = useNavigate();
 
 
     // Called when the submit button is pressed
@@ -16,6 +18,7 @@ function StudentForm() {
             url: '/api/students',
             data: {github_name: newStudent}
         }).then((response) => {
+            // navigate('/students')
             console.log(response);
         }).catch((err) => {
             console.log(err);
