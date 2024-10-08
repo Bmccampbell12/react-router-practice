@@ -2,7 +2,7 @@ import './App.css';
 import StudentForm from '../StudentForm/StudentForm.jsx';
 import StudentList from '../StudentList/StudentList.jsx';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import About from './About';
+import About from '../About/About.jsx';
 
 function App() {
     return (
@@ -14,34 +14,28 @@ function App() {
             
                 <ul>
                     <li>
-                        <link to="home">Home</link>
+                        <Link to="home">Home</Link>
                     </li>
                      <li>
-                       <link to="/about">About</link>
+                       <Link to="/about">About</Link>
                      </li>
                     <li>
-                        <link to="/students">Students</link>
+                        <Link to="/students">Students</Link>
                     </li>
                 </ul>
             
 
       
         
-               <Route path="/" exact>
-                    <Home />
+               <Route path="/home" exact>
+                    <StudentForm />
                  </Route>
                <Route path="/about" exact>
                     <About />
                  </Route>
                <Route path="/students" exact>
-                     <Students />
-                 </Route>
-                 <Route path="/StudentForm" exact>
-                    <StudentForm />
-                 </Route>
-                 <Route path="/StudentForm" exact>
-                     <StudentList />
-                 </Route>
+                    <StudentList />
+                  </Route>
                </Router>
         </div>
     
